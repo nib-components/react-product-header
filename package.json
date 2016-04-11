@@ -1,0 +1,55 @@
+{
+  "name": "@nib-components/react-product-header",
+  "version": "0.1.0",
+  "description": "Small nib footer react component.",
+  "dependencies": {
+    "@nib-styles/colors": "^1.1.1",
+    "@nib-styles/sass-spacing": "^1.0.0",
+    "@nib-styles/v2-icons": "^2.6.2",
+    "@nib-styles/v2-typography": "^4.0.2",
+    "@nib/format-decimal": "^1.0.0",
+    "classnames": "^2.2.3",
+    "react": "^0.14.7",
+    "react-dom": "^0.14.7",
+    "sass-ems": "^1.0.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.6.5",
+    "babel-plugin-transform-object-rest-spread": "^6.5.0",
+    "babel-preset-es2015": "^6.5.0",
+    "babel-preset-react": "^6.5.0",
+    "babelify": "^7.2.0",
+    "browserify": "^12.0.1",
+    "browserify-incremental": "^3.0.1",
+    "react-testutils-query": "^0.1.1",
+    "react-testutils-render": "^0.1.1",
+    "readdir": "^0.0.13",
+    "sass-composer": "2.0.0-beta12"
+  },
+  "browserify": {
+    "transform": [
+      [
+        "babelify"
+      ]
+    ]
+  },
+  "scripts": {
+    "build": "babel ./index.js -d ./dist --source-maps",
+    "example.css.build": "sass-composer index.scss -o example/index.bundled.css",
+    "example.js.build": "browserify -v --debug -t babelify example/index.js -o example/index.bundled.js",
+    "example.build": "npm run build && npm run example.js.build && npm run example.css.build",
+    "prepublish": "npm run example.build"
+  },
+  "directories": {
+    "example": "example"
+  },
+  "main": "./dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nib-components/react-product-header.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nib-components/react-product-header/issues"
+  },
+  "homepage": "https://github.com/nib-components/react-product-header#readme"
+}

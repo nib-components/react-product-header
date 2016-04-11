@@ -1,0 +1,60 @@
+@import "sass-ems";
+@import "@nib-styles/sass-spacing";
+@import "@nib-styles/v2-typography";
+@import "@nib-styles/v2-icons";
+
+$product-overview-padding: 3;
+
+.product-overview-header {
+
+  @include py($product-overview-padding);
+
+  @include copy($color: white);
+  text-align: center;
+
+  //FIXME: less gross chained selectors
+  &--type-hospital.product-overview-header--index-0 {
+    background-color: #45C4Dd; //TODO: standardise?
+  }
+
+  &--type-hospital.product-overview-header--index-1 {
+    background-color: #00abcc;
+  }
+
+  &--type-hospital.product-overview-header--index-2 {
+    background-color: #007dae;
+  }
+
+  &--type-extras.product-overview-header--index-0 {
+    background-color: #AA54C9; //TODO: standardise?
+  }
+
+  &--type-extras.product-overview-header--index-1 {
+    background-color: #9549B3;
+  }
+
+  &--type-extras.product-overview-header--index-2 {
+    background-color: #7E3E97;
+  }
+
+  &__name {
+    text-transform: uppercase;
+    @include copy-size(small);
+    font-weight: 800;
+  }
+
+  &__from {
+    @include copy-size(small);
+  }
+
+  &__price {
+    font-size: em(36px);
+    font-family: $font-title;
+    font-weight: 300;
+  }
+
+  &__frequency {
+    @include copy-size(small);
+  }
+
+}
