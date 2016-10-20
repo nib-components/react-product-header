@@ -1,6 +1,10 @@
+# DEPRECATED 
+### Has changed and looks different between projects. No longer a standard.
+---
+
 # @nib-components/react-product-header
 
-Small nib footer react component.
+React product-header component.
 
 ## Installation
 
